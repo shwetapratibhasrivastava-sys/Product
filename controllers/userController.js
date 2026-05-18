@@ -1,4 +1,4 @@
-import User from "../models/userModel";
+import User from "../models/userModel.js";
 
 
 
@@ -38,6 +38,18 @@ export const updateUserById=async(req,res)=>{
         
      }
 }
+
+
+export const deleteUserById=async(req,res)=>{
+     try {
+        
+     } catch (error) {
+        
+     }
+}
+
+
+
 
 
 

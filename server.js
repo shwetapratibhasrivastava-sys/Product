@@ -3,11 +3,12 @@ import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import connectDb from "./config/db.js";
+import userRoutes from "./routes/userRoutes.js";
+import productRoutes from "./routes/productRoutes.js"
 
 dotenv.config();
 
 const app = express();
-
 
 connectDb();
 
@@ -19,5 +20,11 @@ app.use("/",(req,res)=>{
     res.send("API is running")
 })
 
+app.use("/api/user",userRoutes)
+app.use("/api/product",productRoutes)
+
 app.listen(PORT, () => {
-  `Server is listening on port${PORT}`});
+  `Server is listening on port${PORT}`
+});
+
+
