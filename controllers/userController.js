@@ -50,7 +50,7 @@ export const getUserById=async(req,res)=>{
 
 export const updateUserById=async(req,res)=>{
         try {
-          const user=await User.findById(
+          const user=await User.findByIdAndUpdate(
             req.parama.id,
             req.body,
             {
