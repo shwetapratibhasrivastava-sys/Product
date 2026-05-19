@@ -51,7 +51,7 @@ export const getUserById=async(req,res)=>{
 export const updateUserById=async(req,res)=>{
         try {
           const user=await User.findByIdAndUpdate(
-            req.parama.id,
+            req.params.id,
             req.body,
             {
                new:true
