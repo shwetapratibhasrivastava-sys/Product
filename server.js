@@ -23,8 +23,7 @@ app.use("/",(req,res)=>{
 app.use("/api/user",userRoutes)
 app.use("/api/product",productRoutes)
 
+
 app.listen(PORT, () => {
-  `Server is listening on port${PORT}`
+  console.log(`Server is listening on port ${PORT}`);
 });
-
-
